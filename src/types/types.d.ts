@@ -1,14 +1,14 @@
 // Element
 export type ElementSeries =
-  | 'nonmetal'
-  | 'alkali_metal'
-  | 'alkaline_earth_metal'
-  | 'transition_metal'
-  | 'post_transition_metal'
-  | 'halogen'
-  | 'noble_gas';
+  | 'Nonmetal'
+  | 'Alkali Metal'
+  | 'Alkaline Earth Metal'
+  | 'Transition Metal'
+  | 'Post Transition Metal'
+  | 'Halogen'
+  | 'Noble Gas';
 
-export type ElementState = 'solid' | 'liquid' | 'gas';
+export type ElementState = 'Solid' | 'Liquid' | 'Gas';
 
 export type ElementDiscoveryYear = number | 'Ancient';
 
