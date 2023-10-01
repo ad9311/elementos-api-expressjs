@@ -20,7 +20,8 @@
     "noImplicitAny": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
   },
   "include": ["src"]
 }
