@@ -1,6 +1,7 @@
 import express from 'express';
 import data from '../services/element/elements.json' assert { type: 'json' };
 import findElement from '../services/element/findElement.ts';
+import type { FindElementBy } from '../types.js';
 
 const router = express.Router();
 
@@ -11,7 +12,7 @@ router.get('/', (_req, res) => {
 router.get('/:id', (req, res) => {
   const id = req.params.id;
   const findBy = req.query['find_by'];
-  const element = findElement(id, findBy as string);
+  const element = findElement(id, findBy as FindElementBy);
 
   if (element) {
     res.send({ element });

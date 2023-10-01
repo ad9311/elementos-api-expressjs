@@ -29,3 +29,6 @@ export interface Element {
   yearDiscovered: ElementDiscoveryYear;
   infoUrl: string;
 }
+
+// Query
+export type FindElementBy = 'atomic_number' | 'symbol' | 'name';
