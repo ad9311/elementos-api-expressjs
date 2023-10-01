@@ -1,6 +1,7 @@
 import type { Element } from '../../types/types.js';
+import data from './elements.json' assert { type: 'json' };
 
-const elementData: Element[] = [];
+const elementData = data.elements as Element[];
 
 export function findElementByAtomicNumber(atomicNumber: number) {
   return elementData.find(e => e.atomicNumber === atomicNumber);
