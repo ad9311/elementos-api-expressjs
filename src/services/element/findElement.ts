@@ -1,4 +1,4 @@
-import type { Element } from '../../types/types.js';
+import type { Element } from '../../types.d.ts';
 import data from './elements.json' assert { type: 'json' };
 
 const elementData = data.elements as Element[];
