@@ -32,3 +32,4 @@ export interface Element {
 
 // Query
 export type FindElementBy = 'atomic_number' | 'symbol' | 'name';
+export type KeyFormat = 'camel_case' | 'snake_case';
