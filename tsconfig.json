@@ -2,8 +2,10 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "es2022",
+    "target": "ES2022",
     "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
@@ -19,5 +21,6 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true,
-  }
+  },
+  "include": ["src"],
 }
