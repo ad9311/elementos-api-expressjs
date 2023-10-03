@@ -1,4 +1,4 @@
-import type { ObjectStringKey } from "../types.d.ts";
+import type { ObjectStringKey } from '../types.d.ts';
 
 export function formatObjectKeysToSnakeCase(obj: ObjectStringKey) {
   return Object.keys(obj).reduce((acc, key) => {
