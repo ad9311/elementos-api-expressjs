@@ -16,23 +16,24 @@ export interface Element {
   symbol: string;
   name: string;
   atomicNumber: number;
-  atomicWeight: number;
+  atomicWeight: number | string;
   series: ElementSeries;
   seriesColor: string;
   description: string;
   state: ElementState;
   group: number | null;
   period: number;
-  density: number | null;
-  meltingPoint: number | null;
-  boilingPoint: number | null;
+  density: number | string | null;
+  meltingPoint: number | string | null;
+  boilingPoint: number | string | null;
   yearDiscovered: ElementDiscoveryYear;
   infoUrl: string;
 }
 
 // Query
 export type FindElementBy = 'atomic_number' | 'symbol' | 'name';
-export type KeyFormat = 'camel_case' | 'snake_case';
+export type KeyFormat = 'camel_case' | 'snake_case' | undefined;
+export type displayUnits = '0' | '1' | undefined;
 
 // Helpers
 export type ObjectStringKey = {

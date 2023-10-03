@@ -1,15 +1,15 @@
 import type { ObjectStringKey } from '../types.d.ts';
 
-export function formatObjectKeysToSnakeCase(obj: ObjectStringKey) {
-  return Object.keys(obj).reduce((acc, key) => {
-    acc[key.replace(/([A-Z])/g, (match) => `_${match.toLowerCase()}`)] = obj[key];
+export function formatObjectKeysToSnakeCase(obj: unknown) {
+  return Object.keys(obj as ObjectStringKey).reduce((acc, key) => {
+    (acc as ObjectStringKey)[key.replace(/([A-Z])/g, (match) => `_${match.toLowerCase()}`)] = (obj as ObjectStringKey)[key];
     return acc;
-  }, {} as ObjectStringKey);
+  }, {});
 }
 
-export function formatCollectionKeysToSnakeCase(collection: ObjectStringKey[]) {
-  return collection.reduce((acc, obj: ObjectStringKey) => {
+export function formatCollectionKeysToSnakeCase(collection: unknown[]) {
+  return collection.reduce((acc: unknown[], obj: unknown) => {
     acc.push(formatObjectKeysToSnakeCase(obj));
     return acc;
-  }, [] as ObjectStringKey[]);
+  }, [] as unknown[]);
 }
